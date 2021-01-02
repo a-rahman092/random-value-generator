@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Random Value Generator</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function makeAray(v) {
+            var txtArray = v.split('\n');
+            for (var i = 0; i < txtArray.length; i++) {
+                console.log(txtArray[i]);
+            }
+            var randomIndex = Math.floor(Math.random() * txtArray.length);
+            var randomElement = txtArray[randomIndex];
+            document.getElementById("demo").innerHTML = 'Random Value is: ' + randomElement;
+               }
+    </script>
+    <div class="container mt-3">
+        <div class="card shadow-sm py-5">
+            <center>
+                <h3>Online Random text/number generator</h3>
+                <p>Enter names or numbers seperated by next line and click Get Random Value you will get any one random value</p>
+                <p>You can generate any random winners names also</p>
+                <form>
+                    <textarea id="textAreaID" name="txt" rows="8" cols="100" style="max-width:100%;"></textarea>
+                    <br><br>
+                    <input type="button" onclick="makeAray(txt.value)" value="Get Random Value">
+                </form>
+            </center>
+        </div>
+        
+        <p id="demo"></p>
+    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
